@@ -1,0 +1,6 @@
+# Do not include azure-functions-worker as it may conflict with the Azure Functions platform
+
+azure-functions
+scikit-learn==0.23.1
+pyarrow==1.0.1
+pandas==1.1.2
