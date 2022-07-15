@@ -1,17 +1,16 @@
-# CAGE (Containerized And Generic Execution) artifact eval
+# Reproduciblity Instructions for "Containerized Execution of UDFs: An Experimental Evaluation"
 
-## About the cluster we are providing for artifact eval
+## Artifact Eval Setup
 
-This Spark cluster deployed using Azure HDInsight with vanilla Spark 3.0.0. It has 4 nodes in addition to this head node.
+To simplify setup, we're providing access to our Spark cluster. 
 
-On each of the nodes, we installed Docker. We also provisioned all of our Docker repo keys (our container images/container regsistry are only accessible from within this vnet by company security policy that we cannot get around). 
+Our experiments were performed on a vanilla Spark 3.0 cluster with 2 head and 4 worker nodes (provisioned by HDInsight), each with Intel®Xeon®Platinum 8171M CPU @ 2.60GHz (8 Cores), 64GB RAM, and Python 3.7.  Each of the 4 worker nodes had 1 executor each, with 3 cores (tasks) and 40288mb RAM. 
 
-To recreate this cluster, the Docker images for all of the experiments would need to be rebuilt and pushed to either a local or remote repo such as dockerhub (account required). The scripts would need to be modified to point to the new container repo, in addition to updating the IP addresses of the Spark nodes in all of our scripts. Also, all 20+ of the tables we used would need to be recreated. 
+In our cluster, we built ~50+ Docker images for the experiments, pushed to an internal-only repo (built with the provided `build.sh` file). Most our scripts point specifically to our container repo and contain all of the IP addresses of the Spark nodes (and would need to be modified with new IPs/repo address if run elsewhere).  We have pre-loaded 20+ Spark tables with publicly available and random data specified in the paper, also available to be accessed within the cluster (see below). 
 
-To simplify this process and to focus on the experiments, we're providing access to our Spark cluster. Please feel free to poke around at anything and let us know if you have questions! 
 
-#### Where stuff is:
-* You can see the node IPs by running `echo $SPARK_HOSTS`, and can ssh into them by IP (ex: `ssh REDACT`)
+#### In the cluster:
+* You can see the node IPs by running `echo $SPARK_HOSTS`, and can ssh into them by IP to poke around
 * You can view all of the pre-loaded tables/data stored as parquet with: `hdfs dfs -ls /apps/spark/warehouse/`, ex: `hdfs dfs -ls -h /apps/spark/warehouse/alphabet10m`. 
 * This cluster follows Hortonworks-styple install (HDP), so binaries/Spark files are at : `/usr/hdp/current/...`
 * And configs are at: `/etc/spark3/conf/...`
@@ -28,7 +27,7 @@ Each folder has scripts with instructions in a README of how to run them. Includ
 * fig9
 * fig10
 
-## Graphs
+## Reproducing the Graphs
 
 In each of the folders, the output is stored in a results-name.txt file.  We made all of our graphs using excel.  We included the .xls file that you can paste the output of these scripts into to regenearate the graphs
 
