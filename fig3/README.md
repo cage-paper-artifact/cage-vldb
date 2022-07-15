@@ -4,12 +4,12 @@ relative times should be the same.
 
 Note: To prevent early termination of experiments due to termination of the ssh connection, prepend `nohup` to each command or run the command in a screen session.
 
-HEADSUP:  Azure Functions often breaks in specatular ways that are out of our
+Note:  Azure Functions often breaks in ways that are out of our
 control.  For our "remote" scripts, we wrote a "try again" loop.  Error
 messages from the remote service are unfortunately expected.
 
 
-###Scoring experiments
+### Scoring experiments
 To run the experiment for scoring *no container*:
 Command: `spark-submit run_nocontainer.py`
 Output: The results (times) will be written to a file in this directory called `results-1-score-nocontainer.txt`.
@@ -22,7 +22,7 @@ To run the experiment for scoring *remote with Azure Functions*:
 Command: `spark-submit run_remote_az_func_bench.py`
 Output: The results (times) will be written to a file in this directory called `results-3-score-rest.txt`.
 
-###Primes  (note, this takes a while to run)
+### Primes  (note, this takes a while to run)
 To run the experiment for primes *no container*:
 Command: `spark-submit run_prime_factor_nco_bench.py`
 Output: The results (times) will be written to a file in this directory called `results-4-nocontainer.txt`.
