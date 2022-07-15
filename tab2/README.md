@@ -8,11 +8,11 @@ ssh wn5-spark3
 
 ## There are 5 images in table 2:
 
-Parquet: REPO.azurecr.io/bench/parq:010522
-Sockets: REPO.azurecr.io/bench/sockets_pyslim:prespin
-ArrowFlight: REPO.azurecr.io/bench/arrowflight:paperversion 
-WebServer: REPO.azurecr.io/bench/pullexp:afiv1.0.1
-MLFlow: REPO.azurecr.io/bench/mlflow:aml
+* Parquet: REPO.azurecr.io/bench/parq:010522
+* Sockets: REPO.azurecr.io/bench/sockets_pyslim:prespin
+* ArrowFlight: REPO.azurecr.io/bench/arrowflight:paperversion 
+* WebServer: REPO.azurecr.io/bench/pullexp:afiv1.0.1
+* MLFlow: REPO.azurecr.io/bench/mlflow:aml
 
 
 ## After you have ssh'ed to the worker node:
