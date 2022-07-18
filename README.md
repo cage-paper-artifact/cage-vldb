@@ -22,10 +22,11 @@ Each folder has scripts with instructions in a README of how to run them. Includ
 * tab2 
 * fig3
 * fig4
+* fig5
 * fig6
 * fig8
 * fig9
-* fig10
+
 
 ## Reproducing the Graphs
 
