@@ -14,6 +14,7 @@ Command: `spark-submit run_sockets.py`
 Output: The results (times) will be written to a file in this directory called `results-sockets.txt`.
 
 To run the experiment for scoring *Parquet*:
+Note:  This script assumes that the data will be stored on "/mnt/data/".  You must make sure this (or some other) directory exists on _all the nodes_ in the cluster.
 Command: `spark-submit run_parq.py`
 Output: The results (times) will be written to a file in this directory called `results-parquet.txt`.
 
