@@ -3,10 +3,12 @@ These azure functions are all in python.
 The entire azure function code is in the `AzFunc` directory. Run the following (example) command to build the docker image:
 
 
-`cd AzFunc`
-`docker build --tag <DOCKER_ID>/azurefunctionsimage:v1.0.0 .`
+```
+cd AzFunc
+docker build --tag <DOCKER_ID>/azurefunctionsimage:v1.0.0 .
+```
 
-The folder also contains a few python scripts for testing the docker function locally. To test a docker function locally, go to the `LocalFuncProj` directory and run `func start`.
+The folder also contains a few python scripts for testing the docker function locally. To test a docker function locally, go to the `AzFunc` directory and run `func start`.
 
 Useful Azure Functions tutorials:
 Intro
