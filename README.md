@@ -8,8 +8,8 @@ Our experiments were performed on a vanilla Spark 3.0 cluster with 2 head and 4 
 
 In our cluster, we built ~50+ Docker images for the experiments, pushed to an internal-only repo (built with the provided `build.sh` file). Most our scripts point specifically to our container repo and contain all of the IP addresses of the Spark nodes (and would need to be modified with new IPs/repo address if run elsewhere).  We have pre-loaded 20+ Spark tables with publicly available and random data specified in the paper, also available to be accessed within the cluster (see below). 
 
-#### Quickstart:
-See the notebook `quickstart.ipynb` to see a quick local example
+## Quickstart:
+See the notebook [quickstart.ipynb](https://github.com/cage-paper-artifact/cage-vldb/blob/main/quickstart.ipynb) to see a quick local example
 
 #### In the cluster:
 * You can see the node IPs by running `echo $SPARK_HOSTS`, and can ssh into them by IP to poke around
