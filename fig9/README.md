@@ -11,7 +11,7 @@ Output: The results (times) will be written to a file in this directory called `
 
 ### WebServ-Remote
 Command: `spark-submit run_remote_az_func_bench.py`
-Output: The results (times) will be written to a file in this directory called `results-rest.txt`.
+Output: The results (times) will be written to a file in this directory called `results-rest-remote.txt`.
 
 ### MLflow-local
 Command: `spark-submit run_mlflow.py`

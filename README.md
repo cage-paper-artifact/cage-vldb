@@ -14,7 +14,7 @@ See the notebook [quickstart.ipynb](https://github.com/cage-paper-artifact/cage-
 #### In the cluster:
 * You can see the node IPs by running `echo $SPARK_HOSTS`, and can ssh into them by IP to poke around
 * You can view all of the pre-loaded tables/data stored as parquet with: `hdfs dfs -ls /apps/spark/warehouse/`, ex: `hdfs dfs -ls -h /apps/spark/warehouse/alphabet10m`. 
-* This cluster follows Hortonworks-styple install (HDP), so binaries/Spark files are at : `/usr/hdp/current/...`
+* This cluster follows Hortonworks-style install (HDP), so binaries/Spark files are at : `/usr/hdp/current/...`
 * And configs are at: `/etc/spark3/conf/...`
 
 ## Experiments

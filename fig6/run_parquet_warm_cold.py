@@ -127,7 +127,7 @@ resultfile = open("results-parquet-warmcold.txt", "a")
 for table in ["alphabet100m", "alphabet10m", "alphabet1m", "alphabet" ]:
     print("on table " + table)
     resultfile.write("cold start. rows = " + table + "\n")
-    for x in range(4):
+    for x in range(7):
         print("starting")
         start = time.time()
         query = sql_context.sql("SELECT PREDICT_CONTAINER(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,1,2) as prediction FROM " + table)
