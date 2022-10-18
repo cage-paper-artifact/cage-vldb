@@ -8,6 +8,8 @@ Note:  Azure Functions often breaks in ways that are out of our
 control.  For our "remote" scripts, we wrote a "try again" loop.  Error
 messages from the remote service are unfortunately expected.
 
+NOTE: There will be a lot of output about resetting containers on each of the 4 nodes, this is expected.
+(Ex: "Stop one or more running containers")... just wait 1-4 mins
 
 ### Scoring experiments
 To run the experiment for scoring *no container*:
